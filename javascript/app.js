@@ -10,6 +10,9 @@ var timerInterval = 5;
 var timerCountdown;
 var isCorrect;
 
+
+//Array of the list of questions, possible answers, actual answers, and the link to the gif to play after the question
+//is answered
 var questionList = [
     {
         question: "Brian Boyle's jersey number multiplied by three equals which Nashville Predator's star player??",
@@ -30,7 +33,7 @@ var questionList = [
         image: "https://media.giphy.com/media/xUA7aP1Qd8SNfPDLos/giphy.gif"
     },
     {
-        question: "Which right wing player joined the Nashville Predators after trade with the Philadelphi Flyers?",
+        question: "Which right wing player joined the Nashville Predators after a trade with the Philadelphia Flyers for Ryan Hartman?",
         possibleAnswers: ["Mike Fisher", "David Poile", "Ryan Hartman", "Wayne Simmonds"],
         rightAnswer: 3,
         image: "https://media.giphy.com/media/4HvgmTfWE6vgkQ5sfJ/giphy.gif"
@@ -38,16 +41,16 @@ var questionList = [
 
 ]
 
-//Setting countdown timer for the game
+//This function handles the timer for the game.
 
 function timer() {
     timerCountdown = setInterval(countDown, 1000);
 }
 
-//Function for adding the question to the page.  This function 
+//This function populates the page with new a new question at the beginning of the game, and after each question
 function addQuestion() {
 
-    timerInterval = 5;
+    timerInterval = 10;
 
     timer();
 
@@ -65,6 +68,9 @@ function addQuestion() {
 
 }
 
+
+//This function handles the decision for populating a new question or showing the stats.  It will only show the stats
+//after all of the questions have been asked.
 function setFunction() {
     if (questionCounter >= questionList.length) {
         giveStats();
@@ -75,7 +81,9 @@ function setFunction() {
 }
 
 
-//Function for counting down and displaying the time left
+//Function for counting down and displaying the time left.  This function is called by the timer function.  If time
+//is up, this function clears the interval, iterates the notAnswered variable and passes a false bool (isCorrect variable)
+//to the giveAnswer function.
 function countDown() {
 
     timerInterval--;
@@ -91,8 +99,8 @@ function countDown() {
 }
 
 
-//Function for adding divs to parent.  Might be able to refactor givStats function to utilize this function
-
+//This function is called by the addQuestion function and adds the answer choices to the parent div which is passed
+//to the function.
 function addDivs(parentDiv) {
 
     for (var i = 0; i < questionList.length; i++) {
@@ -105,7 +113,8 @@ function addDivs(parentDiv) {
 }
 
 
-//This function checks the answer the user provided
+//This function checks the answer the user provided.  If the user guessed correctly, it assigns the isCorrect variable
+//to true.  If not it assigns false to the isCorrect variable.  This value is then passed to the giveAnswer function.
 function checkAnswer(dataValue) {
 
 
@@ -122,6 +131,9 @@ function checkAnswer(dataValue) {
 
 }
 
+//This function displays whether the user got the answer correct, the correct answer, and a gif related to the question.
+//The isCorrect bool variable is passed so that the function knows whether to tell the user that they got the answer 
+//correct or not.
 function giveAnswer(isCorrect) {
 
     var parentDiv = $('#cardCenter');
@@ -150,8 +162,10 @@ function giveAnswer(isCorrect) {
     var timeout = setTimeout(setFunction, 5000);
 
 }
-//This function modifies the html to display the statistics from the game.
 
+
+//This function displays the stats of the game and is called by the setFunction when all of the questions have been
+//asked.  
 function giveStats() {
 
     var parentDiv = $('#cardCenter');
@@ -186,6 +200,7 @@ function giveStats() {
 
 }
 
+//Just normal ol jQuery stuff.
 
 $(document).ready(function () {
 

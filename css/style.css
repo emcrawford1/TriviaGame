@@ -79,10 +79,11 @@ body{
 
 #timeRemaining{
 
-    color: #011e41;
     text-align: center;
     font-size: 25px;
     margin-bottom: 90px;
+    background-color: #011e41;
+    color: #FCB514;
     
 
 }
@@ -128,23 +129,29 @@ body{
     
 }
 
+
+
 .endGameStats{
 
     width: 250px;
     margin: 0 auto;
-    color: #011e41;
     font-size: 20px;
     margin-bottom: 15px;
+    background-color: #011e41;
+    color: #FCB514;
+    text-align:center;
 }
+
 
 #gameDone{
 
     width: 350px;
     margin: 0 auto;
-    color: #011e41;
     font-size: 35px;
     margin-top: 50px;
     margin-bottom: 25px;
+    background-color: #011e41;
+    color: #FCB514;
 
 }
 
@@ -169,10 +176,11 @@ body{
 #correctAnswer{
     width: 70%;
     margin: 0 auto;
-    color: #011e41;
     font-size: 20px;
     margin-top: 20px;
     text-align: center;
+    background-color: #011e41;
+    color: #FCB514;
 }
 
 #startGame:hover{
