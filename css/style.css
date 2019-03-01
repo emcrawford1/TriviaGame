@@ -1,0 +1,193 @@
+body{
+    /* background-color: #011e41; */
+    background-image: url("../images/Background.jpg");
+    
+}
+
+#leftBorder{
+    height: 1000px;
+    width: 15%;
+    float: left;
+}
+
+#rightBorder{
+    height: 1000px;
+    width: 15%;
+   
+    float: right;
+}
+
+#mainCard{
+
+    height: 720px;
+    width: 70%;
+    float:left;
+    /* background-color: #FCB514; */
+    background-image: url("../images/Preds.jpg");
+    
+    margin-top: 5%;
+    
+}
+
+#titleContainer{
+
+    width: 100%;
+    height: 75px;
+
+}
+
+#title{
+
+    color: #FCB514;
+    vertical-align: middle;
+    line-height: 50px;
+    font-size: 50px;
+    text-align: center;
+    margin-top: 30px;
+    font-weight: bold;
+    overflow: visible;
+
+}
+
+#cardBorderRight{
+
+    
+    height: 80%;
+    width: 10%;
+    float: left;
+}
+
+
+#cardCenter{
+
+   
+    height: 80%;
+    width: 80%;
+    float: left;
+
+}
+
+#cardBorderLeft{
+
+    
+    height: 80%;
+    width: 10%;
+    float: left;
+
+
+}
+
+#timeRemaining{
+
+    color: #011e41;
+    text-align: center;
+    font-size: 25px;
+    margin-bottom: 90px;
+    
+
+}
+
+#triviaQuestion{
+    margin-top: 25px;
+    color: #FCB514;
+    background-color: #011e41;
+    text-align: center;
+    font-size: 35px;
+    font-weight: bold;
+    
+
+
+}
+
+.question{
+
+    width: 300px;
+    margin: 0 auto;
+    margin-top: 25px;    
+    color: #FCB514;
+    font-weight: bold;
+    font-size: 30px;
+    border-style: solid;
+    border-color: #011e41;
+    background-color: #011e41;
+    border-width: 2px;
+    
+}
+
+#startGame{
+    background-color: #011e41;
+    color: #FCB514;
+    text-align: center;
+    font-size: 30px;
+    font-weight: bold;
+    width: 250pxß;
+    line-height: 45px;
+    margin: 0 auto;
+    margin-top: 100px;
+    cursor: pointer;
+    
+}
+
+.endGameStats{
+
+    width: 250px;
+    margin: 0 auto;
+    color: #011e41;
+    font-size: 20px;
+    margin-bottom: 15px;
+}
+
+#gameDone{
+
+    width: 350px;
+    margin: 0 auto;
+    color: #011e41;
+    font-size: 35px;
+    margin-top: 50px;
+    margin-bottom: 25px;
+
+}
+
+#gif{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 75%;
+    margin-top: 20px;
+}
+
+.image{
+
+
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 100%;
+    margin-top: 20px;
+}
+
+#correctAnswer{
+    width: 70%;
+    margin: 0 auto;
+    color: #011e41;
+    font-size: 20px;
+    margin-top: 20px;
+    text-align: center;
+}
+
+#startGame:hover{
+    color: #011e41;
+    background-color: #FCB514;
+    border-width: 2px;
+    border-style: solid;
+    border-color: #011e41;
+}
+
+.question:hover{
+    background-color: #FCB514;
+    color:  #011e41;
+    border-width: 2px;
+    border-style: solid;
+    border-color: #011e41;
+    cursor: pointer;
+}
